@@ -43,7 +43,7 @@ sent = 0
 while True:
     try:
         sock.sendto(bytes, (ip, port))
-        sent = sent + 1
+        sent = sent + 10000
         port = port + 1
         print(f"Sent {sent} packet to {ip} through port:{port}")
         if port == 65534:
